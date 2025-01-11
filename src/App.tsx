@@ -31,9 +31,9 @@ function setSortGoods(goods: string[], sortField: SortType | '') {
   if (sortField) {
     sortGoods.sort((good1, good2) => {
       switch (sortField) {
-        case SORT_FIELD_ALPH:
+        case SortType.alph:
           return good1.localeCompare(good2);
-        case SORT_FIELD_LENGTH:
+        case SortType.length:
           return good1.length - good2.length;
         default:
           return 0;
